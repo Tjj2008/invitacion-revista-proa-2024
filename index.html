@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación - Revista ProA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+      
+            /* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos básicos del body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0b47a8;  /* Fondo de color detrás del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Evita que la pantalla haga scroll */
+}
+
+/* Contenedor principal */
+.invitation-container {
+    background-color: white;
+    padding: 3rem;
+    border-radius: 16px;  /* Bordes redondeados para que no sea un cuadrado rígido */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80vw;  /* Ajusta el contenedor al 80% del ancho de la pantalla */
+    max-width: 800px;  /* Tamaño máximo en pantallas grandes */
+    min-height: 50vh;  /* Altura mínima */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Número de fondo en grande */
+.background-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 16rem;
+    color: #0561f55d;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Otros elementos del contenedor */
+.invitation-content {
+    position: relative;
+    z-index: 2;  /* Asegura que el contenido esté sobre el fondo */
+}
+
+        .proa-text {
+            font-family: 'Dancing Script', serif;
+            font-size: 3rem;
+            color: #042a6b62;
+            position: relative;
+            z-index: 2;
+            margin-top: 8rem;
+        }
+
+        .years-text {
+            font-family: 'Dancing Script', serif;
+            font-size: 2.5rem;
+            color: #042b6e80;
+            position: relative;
+            z-index: 2;
+            margin-top: 0.5rem;
+        }
+
+        .content {
+            font-family: 'Elegant', serif;
+            font-size: 1rem;
+            color: #555;
+            margin-top: 1rem;
+            line-height: 1.5;
+            z-index: 2;
+            position: relative;
+        }
+
+        .date-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            color: #333;
+            position: relative;
+            z-index: 2;
+        }
+
+        .date-number {
+            font-size: 3rem;
+            color: #000;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .date-text {
+            text-align: left;
+        }
+
+        .date-text p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .divider {
+            width: 2px;
+            height: 60px;
+            background-color: #333;
+            margin: 0 1rem;
+        }
+
+        .location-info {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .countdown {
+            font-family: 'Rowdies', serif;
+            font-size: 2rem;
+            color: #011469;
+            margin-top: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-container img {
+            width: 100px;
+            height: auto;
+        }
+
+        .confirm-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #0561f5; /* El color que prefieras */
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem; /* Un espacio arriba del botón */
+    transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+    background-color: #0340b6; /* Color más oscuro cuando el usuario pase el ratón */
+}
+    </style>
+</head>
+<body>
+
+    <div class="invitation-container">
+        <div class="background-number">10</div>
+        <p class="proa-text">Años</p>
+        <p class="years-text">Proa</p>
+        <p class="content">
+            Nos complace invitarlos a participar de la presentación de la 2da edición de la Revista ProA C⁸I⁷T⁶.
+        </p>
+        <div class="date-info">
+            <div class="date-number">15</div>
+            <div class="date-text">
+                <p>Noviembre</p>
+            </div>
+            <div class="divider"></div>
+            <div class="date-text location-info">
+                <p>10 AM</p>
+                <p>Escuela PROA Capital Centro</p>
+                <p>Agustín Garzón 1221</p>
+            </div>
+        </div>
+        <div class="countdown" id="countdown">
+            ¡Ya falta poco!
+        </div>
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="Logo 1">
+            <img src="WhatsApp Image 2024-11-05 at 20.24.21.jpeg" alt="Logo 2">
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSftdg9r8Wp59Pnym4xBFxUjO9aR5cWaCgxFVB1ZHxBUfDcMkA/viewform?usp=sf_link" target="_blank" class="confirm-button">Confirmar Asistencia</a>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const eventDate = new Date("November 15, 2024 10:00:00").getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML =
+                `Faltan ${days} días, ${hours} horas, ${minutes} minutos, y ${seconds} segundos`;
+
+            if (timeLeft < 0) {
+                document.getElementById("countdown").innerHTML = "¡El evento ya ha comenzado!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
