@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <style>
       
-            /* Reset de estilos básicos */
+        /* Reset de estilos básicos */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@
 /* Estilos básicos del body */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #0b47a8;  /* Fondo de color detrás del contenedor */
+    background-color: #0561f5;  /* Fondo de color detrás del contenedor */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,6 +64,39 @@ body {
     z-index: 2;  /* Asegura que el contenido esté sobre el fondo */
 }
 
+/* Botón de Confirmar Asistencia */
+.confirm-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #0561f5; /* El color que prefieras */
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 2rem; /* Espacio superior */
+    transition: background-color 0.3s ease;
+    width: 100%; /* Hace que el botón ocupe el 100% del ancho en pantallas pequeñas */
+    max-width: 300px; /* Ancho máximo en pantallas grandes */
+}
+
+/* Hover para el botón */
+.confirm-button:hover {
+    background-color: #0340b6; /* Color más oscuro cuando el usuario pase el ratón */
+}
+
+/* Media Query para pantallas pequeñas (por ejemplo, celulares) */
+@media (max-width: 768px) {
+    .invitation-container {
+        padding: 2rem; /* Menos padding en pantallas pequeñas */
+        width: 90vw;  /* Ajusta el ancho al 90% en pantallas pequeñas */
+    }
+
+    .confirm-button {
+        padding: 1rem;
+        font-size: 1rem; /* Ajusta el tamaño de la fuente del botón */
+        max-width: 90%; /* Hace que el botón ocupe casi todo el ancho */
+    }
+}
         .proa-text {
             font-family: 'Dancing Script', serif;
             font-size: 3rem;
@@ -154,22 +187,6 @@ body {
             height: auto;
         }
 
-        .confirm-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #0561f5; /* El color que prefieras */
-    color: white;
-    font-size: 1.2rem;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem; /* Un espacio arriba del botón */
-    transition: background-color 0.3s ease;
-}
-
-.confirm-button:hover {
-    background-color: #0340b6; /* Color más oscuro cuando el usuario pase el ratón */
-}
     </style>
 </head>
 <body>
