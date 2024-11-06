@@ -36,9 +36,9 @@ body {
     border-radius: 16px;  /* Bordes redondeados */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 90vw;  /* Ajusta el contenedor al 85% del ancho de la pantalla */
+    width: 85vw;  /* Ajusta el contenedor al 85% del ancho de la pantalla */
     max-width: 900px;  /* Tamaño máximo en pantallas grandes */
-    min-height: 60vh;  /* Altura mínima para evitar que sea muy pequeño */
+    min-height: 50vh;  /* Altura mínima para evitar que sea muy pequeño */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,7 +69,7 @@ body {
 .confirm-button {
     display: inline-block;
     padding: 1.2rem 2.5rem;
-    background-color: #0561f5; /* El color que prefieras */
+    background-color: #5092fc; /* El color que prefieras */
     color: white;
     font-size: 1.2rem;
     text-decoration: none;
@@ -87,9 +87,14 @@ body {
 
 /* Media Query para pantallas pequeñas (por ejemplo, celulares) */
 @media (max-width: 768px) {
+    body {
+        padding: 0 1rem; /* Añade un pequeño espacio lateral */
+    }
+
     .invitation-container {
-        padding: 2rem; /* Menos padding en pantallas pequeñas */
+        padding: 1.5rem; /* Reducir padding en pantallas pequeñas */
         width: 90vw;  /* Ajusta el ancho al 90% en pantallas pequeñas */
+        min-height: auto; /* Evita que el contenedor se haga más grande de lo necesario */
     }
 
     .confirm-button {
@@ -98,7 +103,6 @@ body {
         max-width: 90%; /* Hace que el botón ocupe casi todo el ancho */
     }
 }
-
         .proa-text {
             font-family: 'Dancing Script', serif;
             font-size: 3rem;
