@@ -24,21 +24,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Usamos min-height para que el body ocupe al menos toda la altura de la ventana */
     margin: 0;
-    overflow: hidden; /* Evita que la pantalla haga scroll */
+    overflow-y: auto; /* Permite el desplazamiento vertical si es necesario */
 }
 
 /* Contenedor principal */
 .invitation-container {
     background-color: white;
-    padding: 3rem;
-    border-radius: 16px;  /* Bordes redondeados para que no sea un cuadrado rígido */
+    padding: 2rem; /* Menos padding para que ocupe mejor el espacio */
+    border-radius: 16px;  /* Bordes redondeados */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 80vw;  /* Ajusta el contenedor al 80% del ancho de la pantalla */
     max-width: 800px;  /* Tamaño máximo en pantallas grandes */
-    min-height: 50vh;  /* Altura mínima */
+    min-height: 50vh;  /* Altura mínima para evitar que sea muy pequeño */
     display: flex;
     flex-direction: column;
     justify-content: center;
